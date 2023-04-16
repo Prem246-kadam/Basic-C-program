@@ -1,40 +1,31 @@
 using System;
 
-namespace PrimeFactors
+namespace PrimeFactorization
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a number to find its prime factors:");
-            int N = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
 
-            if (N <= 1)
+            Console.WriteLine($"Prime factors of {n} are:");
+            PrimeFactorization(n);
+
+            Console.ReadLine();
+        }
+
+        static void PrimeFactorization(int n)
+        {
+            for (int i = 2; i <= n; i++)
             {
-                Console.WriteLine("Invalid input. N should be greater than 1.");
-                return;
-            }
-
-            Console.WriteLine($"Prime factors of {N}:");
-            int i = 2;
-
-            while (i * i <= N)
-            {
-                if (N % i == 0)
+                while (n % i == 0)
                 {
-                    Console.WriteLine(i);
-                    N /= i;
+                    Console.Write($"{i} ");
+                    n = n / i;
                 }
-                else
-                {
-                    i++;
-                }
-            }
-
-            if (N > 1)
-            {
-                Console.WriteLine(N);
             }
         }
     }
 }
+
