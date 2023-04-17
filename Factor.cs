@@ -14,7 +14,6 @@ namespace PrimeFactorization
 
             Console.ReadLine();
         }
-
         static void PrimeFactorization(int n)
         {
             for (int i = 2; i <= n; i++)
