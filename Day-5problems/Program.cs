@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1.Large Number 2.FindEvenOdd 3.LeapYear 4.FlipCoin 5.Swap 6.VowelOrConsonentes 7.QuestiontAndReminder");
+            Console.WriteLine("1.Large Number 2.FindEvenOdd 3.LeapYear 4.FlipCoin 5.Swap 6.VowelOrConsonentes 7.QuestiontAndReminder");;
 
            int option = Convert.ToInt32(Console.ReadLine());
 
